@@ -1,0 +1,64 @@
+// reset
+@import "compass/reset";
+
+// layout
+@import "layout";
+
+// base
+@import "base";
+
+// for angular
+@import "angular";
+
+// contents
+
+// list
+.posts {
+	.post {
+		padding: 5px;
+	}
+	a {
+		display: block;
+		padding: 10px;
+		background: rgba(0,0,0,0.6);
+		color: #fff;
+		&.selected {
+			.desc {
+				display: block;
+			}
+		}
+	}
+	.hd {
+		position: relative;
+	}
+	.ttl {
+		margin-bottom: 5px;
+		font-size: 14px;
+		line-height: 1.6;
+	}
+	.date {
+		font-size: 10px;
+	}
+	.tool {
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+		li {
+			display: inline-block;
+		}
+	}
+	.desc {
+		display: none;
+	}
+}
+
+
+
+
+@import "compass/utilities/sprites";
+$sprite-sprite-dimensions: true;
+@import "sprite/*.png";
+@include all-sprite-sprites;
+
+
+

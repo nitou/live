@@ -1,0 +1,7 @@
+.ng-hide {
+	display: block!important;
+	//this is just another form of hiding an element
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
