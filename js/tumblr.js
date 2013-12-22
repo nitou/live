@@ -1,4 +1,4 @@
-var app = angular.module('app', [ 'ngSanitize']);
+var app = angular.module('app', [ 'ngSanitize', 'ngAnimate']);
 
 function getPost($http){
 	this.loadTumblr = function(callback){
