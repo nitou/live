@@ -204,12 +204,12 @@ footer {
 .posts .bd {
   height: 0;
   overflow: hidden;
-  transition: height 0.25s linear;
+  transition: 0.25s linear;
 }
 /* line 36, ../sass/main.scss */
 .posts .selected .bd {
   height: 100%;
-  transition: height 0.25s linear;
+  transition: 0.25s linear;
 }
 /* line 42, ../sass/main.scss */
 .posts .ttl-area {
