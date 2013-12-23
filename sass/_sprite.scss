@@ -1,0 +1,31 @@
+@import "compass/utilities/sprites";
+$icons: sprite-map("icon/*.png");
+$sprite-img: sprite-url($icons);
+@mixin sprite-bg($name) {
+    $ypos: round(nth(sprite-position($icons,$name),2)/2);
+    background-position:0 $ypos;
+    width: image-width(sprite-file($icons,$name))/2;
+    height: image-height(sprite-file($icons,$name))/2;
+}
+%ex-sprite {
+    display:block;
+    background-image:$sprite-img;
+    background-size:25px auto;
+    text-indent:-9999px;
+}
+.icon_share {
+    @extend %ex-sprite;
+    @include sprite-bg(icon_share);
+}
+.icon_reblog {
+    @extend %ex-sprite;
+    @include sprite-bg(icon_reblog);
+}
+.icon_like {
+    @extend %ex-sprite;
+    @include sprite-bg(icon_like);
+}
+.icon_burger {
+    @extend %ex-sprite;
+    @include sprite-bg(icon_burger);
+}

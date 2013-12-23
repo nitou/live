@@ -1,44 +1,17 @@
 // reset
 @import "compass/reset";
 
-// layout
-@import "layout";
-
 // base
 @import "base";
+
+// layout
+@import "layout";
 
 // for angular
 @import "angular";
 
-// sprite mixin
-@import "compass/utilities/sprites";
-$sprite-sprite-dimensions: true;
-$sprites: sprite-map("/sprite/slice/*.png");
-$sprite-image: "../img/sprite/slice-s2cffee0ee8.png";
-@mixin sprite-image( $icon ) {
-	display: block;
-	background-image: url($sprite-image);
-
-	// positionの計算
-	$ypos: round(nth(sprite-position($sprites, $icon), 2) / 2);
-	background-position: 0 $ypos;
-
-	// slice画像のwidth・heightを取得
-	width: image-width("sprite/slice/"+$icon+".png")/2;
-	height: image-height("sprite/slice/"+$icon+".png")/2;
-
-	// sprite画像のwidth・heightを取得
-	background-size: image-width($sprite-image)/2 image-height($sprite-image)/2;
-
-	text-indent: -9999px;
-}
-
-
-// contents
-
-#loadBtn {
-	display: none;
-}
+// sprite
+@import "sprite";
 
 // list
 .posts {
@@ -57,12 +30,12 @@ $sprite-image: "../img/sprite/slice-s2cffee0ee8.png";
 	.bd {
 		height: 0;
 		overflow: hidden;
-		-webkit-transition: height 0.5s linear;
-		transition: height 0.5s linear;
+		transition: height 0.25s linear;
 	}
 	// 選択されたら開く
 	.selected .bd {
 		height: 100%;
+		transition: height 0.25s linear;
 	}
 
 	// タイトルのクリック領域
@@ -70,9 +43,9 @@ $sprite-image: "../img/sprite/slice-s2cffee0ee8.png";
 		display: block;
 	}
 	.ttl {
-		margin-bottom: 5px;
+		margin-bottom: 15px;
 		font-size: 20px;
-		line-height: 1.6;
+		line-height: 1.3;
 	}
 	.date {
 		font-size: 10px;
@@ -94,7 +67,8 @@ $sprite-image: "../img/sprite/slice-s2cffee0ee8.png";
 	.desc {
 		padding: 10px;
 		font-size: 15px;
-		line-height: 1.8;
+        font-weight: normal;
+		line-height: 1.6;
 		img {
 			max-width: 100%;
 			height: auto;
@@ -106,31 +80,17 @@ $sprite-image: "../img/sprite/slice-s2cffee0ee8.png";
 		a {
 			display: block;
 			padding: 13px 5px;
-			background: #000;
+            background: rgba(0,0,0,0.3);
 			text-align: center;
 		}
 	}
 }
 
-// sprite
-.icon_share {
-	@include sprite-image(icon_share);
-}
-.icon_reblog {
-	@include sprite-image(icon_reblog);
-}
-.icon_like {
-	@include sprite-image(icon_like);
-}
-.icon_burger {
-	@include sprite-image(icon_burger);
-}
-
 // tumblr style
 .authorInfo {
-	margin-top: 30px;
-	padding-top: 30px;
-	border-top: 1px solid #fefefe;
+	margin-top: 20px;
+	padding-top: 20px;
+	border-top: 1px solid rgba(0,0,0,0.3);
 	&:after {
 		content: "";
 		display: block;
