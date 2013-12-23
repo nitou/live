@@ -1,4 +1,4 @@
-var app = angular.module('app', [ 'ngSanitize', 'ngAnimate']);
+var app = angular.module('app', [ 'ngSanitize' ]);
 
 function getPost($http){
 	this.loadTumblr = function(callback){
@@ -38,12 +38,5 @@ function AppController($scope, $http, $sce){
 	$scope.openBody = function(e){
 		e.preventDefault();
 		return 'on';
-	};
-
-}
-
-function myCtrl($scope, $window) {
-	$scope.init = function () {
-		($window.mockWindow || $window).alert('Hello');
 	};
 }

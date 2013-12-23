@@ -1,9 +1,5 @@
 body {
-	$bg_body: "../img/bg/bg_body.png";
-
 	font-size: 12px;
-	background: url($bg_body) no-repeat center top;
-	background-size: image-width($bg_body)/2 image-height($bg_body)/2;
 }
 a {
 	text-decoration: none;

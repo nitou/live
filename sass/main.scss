@@ -35,11 +35,15 @@ $sprite-image: "../img/sprite/slice-s2cffee0ee8.png";
 
 
 // contents
+
+#loadBtn {
+	display: none;
+}
+
 // list
 .posts {
 	.post {
 		margin: 5px;
-		padding: 10px;
 		background: rgba(0,0,0,0.6);
 		color: #fff;
 		a {
@@ -48,14 +52,17 @@ $sprite-image: "../img/sprite/slice-s2cffee0ee8.png";
 	}
 	.hd {
 		position: relative;
+		padding: 10px;
 	}
 	.bd {
-		display: none;
-		padding: 20px 0;
+		height: 0;
+		overflow: hidden;
+		-webkit-transition: height 0.5s linear;
+		transition: height 0.5s linear;
 	}
 	// 選択されたら開く
 	.selected .bd {
-		display: block;
+		height: 100%;
 	}
 
 	// タイトルのクリック領域
@@ -64,11 +71,12 @@ $sprite-image: "../img/sprite/slice-s2cffee0ee8.png";
 	}
 	.ttl {
 		margin-bottom: 5px;
-		font-size: 15px;
+		font-size: 20px;
 		line-height: 1.6;
 	}
 	.date {
 		font-size: 10px;
+		color: #ccc;
 	}
 
 	// シェア・リブログ・ライクボタン
@@ -84,15 +92,21 @@ $sprite-image: "../img/sprite/slice-s2cffee0ee8.png";
 
 	// コンテンツ
 	.desc {
-		line-height: 1.5;
-		font-size: 14px;
+		padding: 10px;
+		font-size: 15px;
+		line-height: 1.8;
+		img {
+			max-width: 100%;
+			height: auto;
+		}
 	}
 
 	// 閉じる
 	.close {
 		a {
 			display: block;
-			padding: 5px;
+			padding: 13px 5px;
+			background: #000;
 			text-align: center;
 		}
 	}
@@ -107,6 +121,9 @@ $sprite-image: "../img/sprite/slice-s2cffee0ee8.png";
 }
 .icon_like {
 	@include sprite-image(icon_like);
+}
+.icon_burger {
+	@include sprite-image(icon_burger);
 }
 
 // tumblr style
