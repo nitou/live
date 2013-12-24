@@ -39,10 +39,10 @@ data-ng-initはonloadで実行
 <!--
 ng-repeatで繰り返し
 -->
-<li class="post" ng-repeat="post in posts" ng-class="{'': !selected,'selected': selected}">
+<li class="post" ng-repeat="post in posts" ng-class="">
 
 		<div class="hd">
-			<a href="javascript:void(0)" ng-click="selected=!selected" class="ttl-area"><div>
+			<a href="javascript:void(0)" ng-click="" class="ttl-area"><div>
 				<h2 class="ttl">{{ post.title }}</h2>
 				<p class="date">{{ post.date }}</p>
 			</div></a>
