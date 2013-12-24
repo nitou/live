@@ -39,25 +39,27 @@ data-ng-initはonloadで実行
 <!--
 ng-repeatで繰り返し
 -->
-<li class="post" ng-repeat="post in posts" ng-class="">
+<li class="post" ng-repeat="post in posts" ng-class="{'selected':selected,'':!selected}">
 
-		<div class="hd">
-			<a href="javascript:void(0)" ng-click="" class="ttl-area"><div>
-				<h2 class="ttl">{{ post.title }}</h2>
-				<p class="date">{{ post.date }}</p>
-			</div></a>
-			<ul class="tool">
-				<li><span class="icon_share">シェア</span></li>
-				<li><span class="icon_reblog">リブログ</span></li>
-				<li><span class="icon_like">スキ!</span></li>
-			</ul>
-		</div>
-		<div class="bd">
-			<div class="desc" ng-bind-html="post.body"></div>
-			<p class="close"><a href="javascript:void(0)" ng-click="selected=''">閉じる</a></p>
-		</div>
+    <div class="hd">
+        <a href="javascript:void(0)" ng-click="selected=!selected" class="ttl-area"><div>
+            <h2 class="ttl">{{ post.title }}</h2>
+            <p class="date">{{ post.date }}</p>
+        </div></a>
+        <ul class="tool">
+            <li><span class="icon_share">シェア</span></li>
+            <li><span class="icon_reblog">リブログ</span></li>
+            <li><span class="icon_like">スキ!</span></li>
+        </ul>
+    </div>
 
-	</li>
+    <div class="bd">
+        <div class="desc" ng-bind-html="post.body"></div>
+        <p class="close"><a href="javascript:void(0)" ng-click="selected=''">閉じる</a></p>
+    </div>
+
+</li>
+
 </ul>
 </div>
 

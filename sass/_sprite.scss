@@ -1,22 +1,32 @@
 @import "compass/utilities/sprites";
 $icons: sprite-map("icon/*.png");
 $sprite-img: sprite-url($icons);
+
 @mixin sprite-bg($name) {
+    // $ypos
     $ypos: round(nth(sprite-position($icons,$name),2)/2);
-    background-position:0 $ypos;
+    // background-position
+    background-position: 0 $ypos;
+    // width, height
     width: image-width(sprite-file($icons,$name))/2;
     height: image-height(sprite-file($icons,$name))/2;
 }
+
+// extend
 %ex-sprite {
-    display:block;
-    background-image:$sprite-img;
-    background-size:25px auto;
-    text-indent:-9999px;
+    display: block;
+    background-image: $sprite-img;
+    background-size: 25px auto;
+    text-indent: -9999px;
 }
+
+// icon_share
 .icon_share {
     @extend %ex-sprite;
     @include sprite-bg(icon_share);
 }
+
+// icon_*
 .icon_reblog {
     @extend %ex-sprite;
     @include sprite-bg(icon_reblog);

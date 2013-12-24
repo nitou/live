@@ -1,6 +1,6 @@
 @import "compass/reset";
 @import "base";
-//@import "sprite";
+@import "sprite";
 
 // list
 .posts {
@@ -19,12 +19,10 @@
 	.bd {
 		height: 0;
 		overflow: hidden;
-		transition: 0.25s linear;
 	}
 	// 選択されたら開く
 	.selected .bd {
 		height: 100%;
-		transition: 0.25s linear;
 	}
 
 	// タイトルのクリック領域
@@ -58,10 +56,11 @@
 		font-size: 15px;
         font-weight: normal;
 		line-height: 1.6;
-		img {
-			max-width: 100%;
-			height: auto;
-		}
+        //img
+        img {
+            max-width: 100%;
+            height: auto;
+        }
 	}
 
 	// 閉じる
