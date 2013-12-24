@@ -65,11 +65,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 1, ../sass/_base.scss */
 html {
-  padding-top: 35px;
   background-color: #d00;
 }
 
-/* line 6, ../sass/_base.scss */
+/* line 4, ../sass/_base.scss */
 body {
   font-family: sans-serif;
   font-size: 12px;
@@ -77,14 +76,14 @@ body {
   background-size: 100% auto;
 }
 
-/* line 15, ../sass/_base.scss */
+/* line 13, ../sass/_base.scss */
 a {
   text-decoration: none;
 }
 
 /* line 1, ../sass/_layout.scss */
 header {
-  height: 440px;
+  height: 510px;
   transition: height 0.25s linear;
 }
 /* line 4, ../sass/_layout.scss */
@@ -95,7 +94,7 @@ header .head-ttl {
 @media screen and (max-width: 480px) {
   /* line 9, ../sass/_layout.scss */
   header {
-    height: 220px;
+    height: 255px;
   }
 }
 /* line 13, ../sass/_layout.scss */

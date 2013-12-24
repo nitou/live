@@ -1,5 +1,5 @@
 header {
-	height: 440px;
+	height: 510px;
 	transition: height 0.25s linear;
 	.head-ttl {
 		display: none;
@@ -7,7 +7,7 @@ header {
 }
 @media screen and (max-width: 480px) {
 	header {
-		height: 220px;
+		height: 255px;
 	}
 }
 nav {
