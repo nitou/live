@@ -6,7 +6,8 @@ html {
 body {
     font-family: sans-serif;
 	font-size: 12px;
-	$bg_body: "../img/bg/bg_before.png";
+	$bg_body: "../img/bg_main.png";
+//	$bg_body: "../img/bg/bg_before.png";
 //	$bg_body: "../img/bg/bg_after.png";
 	background: url($bg_body) no-repeat center top;
 	background-size: 100% auto;

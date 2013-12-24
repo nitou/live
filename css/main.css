@@ -73,11 +73,11 @@ html {
 body {
   font-family: sans-serif;
   font-size: 12px;
-  background: url("../img/bg/bg_before.png") no-repeat center top;
+  background: url("../img/bg_main.png") no-repeat center top;
   background-size: 100% auto;
 }
 
-/* line 14, ../sass/_base.scss */
+/* line 15, ../sass/_base.scss */
 a {
   text-decoration: none;
 }
